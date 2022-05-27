@@ -1,0 +1,24 @@
+# permissions for end users to edit storageconsumerclients.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: storageconsumerclient-editor-role
+rules:
+- apiGroups:
+  - odf.openshift.io
+  resources:
+  - storageconsumerclients
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - odf.openshift.io
+  resources:
+  - storageconsumerclients/status
+  verbs:
+    - get
