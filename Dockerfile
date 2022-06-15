@@ -11,7 +11,7 @@ COPY vendor/ vendor/
 RUN go install ./vendor/...
 
 # Copy the project source
-COPY main.go Makefile .
+COPY main.go Makefile ./
 COPY hack/ hack/
 COPY api/ api/
 COPY controllers/ controllers/
